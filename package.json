@@ -1,0 +1,55 @@
+{
+    "name": "verify-valid-ssl",
+    "version": "1.0.1",
+    "description": "This module is a validator for SSL Certificates using the PEM node module. You can validate SSL Keys, SSL Certificates, SSL Certificate Domains, SSL Certificate Bundles, etc.",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha",
+        "prepare": "husky install"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SeptBlast/verify-valid-ssl.git"
+    },
+    "keywords": [
+        "SSL",
+        "PEM",
+        "SSL Certificates",
+        "Certificate Bundles",
+        "Certificate Domains"
+    ],
+    "author": {
+        "name": "Devesh Kumar",
+        "email": "deveshkumarsep12@outlook.com",
+        "url": "https://www.github.com/SeptBlast"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/SeptBlast/verify-valid-ssl/issues"
+    },
+    "homepage": "https://github.com/SeptBlast/verify-valid-ssl#readme",
+    "dependencies": {
+        "pem": "^1.14.4",
+        "ramda": "^0.27.1"
+    },
+    "devDependencies": {
+        "eslint": "^8.4.1",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.1.2",
+        "mocha": "^9.1.3",
+        "should": "^13.2.3"
+    },
+    "engines": {
+        "node": ">14.0.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "mocha": {
+        "reporter": "spec",
+        "recursive": true,
+        "check-leak": true
+    }
+}
