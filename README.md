@@ -1,5 +1,7 @@
 # Verify valid SSL Certs
 
+[![npm version](https://badge.fury.io/js/@imdevesh%2Fverify-valid-ssl.svg)](https://badge.fury.io/js/@imdevesh%2Fverify-valid-ssl)
+
 This module is a validator for SSL Certificates using the [PEM node module](https://www.npmjs.com/package/pem). You can validate SSL Keys, SSL Certificates, SSL Certificate Domains, SSL Certificate Bundles, etc.
 
 -   [Installation](#installation)
@@ -16,13 +18,13 @@ This module is a validator for SSL Certificates using the [PEM node module](http
 ## Installation
 
 ```bash
-npm install ssl-validator
+npm i @imdevesh/verify-valid-ssl
 ```
 
 or
 
 ```bash
-yarn add ssl-validator
+yarn add @imdevesh/verify-valid-ssl
 ```
 
 ## API Documentation
@@ -32,7 +34,7 @@ All of these functions will throw an error if something is invalid, except the [
 ### Validate SSL
 
 ```javascript
-const { validateSSL } = require("ssl-validator");
+const { validateSSL } = require("@imdevesh/verify-valid-ssl");
 
 await validateSSL(cert, options);
 ```
@@ -49,7 +51,7 @@ await validateSSL(cert, options);
 This function validates that the certificate is an SSL certificate and checks the validity period.
 
 ```javascript
-const { validateSSLCert } = require("ssl-validator");
+const { validateSSLCert } = require("@imdevesh/verify-valid-ssl");
 await validateSSLCert(cert, options);
 ```
 
@@ -62,7 +64,7 @@ await validateSSLCert(cert, options);
 This function validates that the certificate is an SSL certificate and checks the validity period.
 
 ```javascript
-const { validateSSLKey } = require("ssl-validator");
+const { validateSSLKey } = require("@imdevesh/verify-valid-ssl");
 await validateSSLKey(key);
 ```
 
@@ -71,7 +73,7 @@ await validateSSLKey(key);
 This function validates that the certificate and the bundle are certificates, and ensures that the bundle and certificate go together.
 
 ```javascript
-const { validateCertBundle } = require("ssl-validator");
+const { validateCertBundle } = require("@imdevesh/verify-valid-ssl";
 await validateCertBundle(cert, bundle, options);
 ```
 
@@ -84,7 +86,7 @@ await validateCertBundle(cert, bundle, options);
 This function validates that the given certificate and key are a matching pair.
 
 ```javascript
-const { validateCertKeyPair } = require("ssl-validator");
+const { validateCertKeyPair } = require("@imdevesh/verify-valid-ssl");
 await validateCertKeyPair(cert, key, options);
 ```
 
@@ -97,7 +99,7 @@ await validateCertKeyPair(cert, key, options);
 This function validates the given certificate and that it matches the given domain.
 
 ```javascript
-const { validateCertToDomain } = require("ssl-validator");
+const { validateCertToDomain } = require("@imdevesh/verify-valid-ssl");
 await validateCertToDomain(cert, domain, options);
 ```
 
@@ -118,8 +120,10 @@ Each of the functions listed above (validateSSL, validateSSLCert, etc.) has a co
 | validateCertKeyPair    | isValidCertKeyPair      |
 | validateCertToDomain   | isValidCertToDomain     |
 
+<br/>
+
 ```javascript
-const { isValidSSL } = require("ssl-validator");
+const { isValidSSL } = require("@imdevesh/verify-valid-ssl");
 if (!(await isValidSSL(cert))) {
     return { message: "Sorry, the certificate supplied is not valid." };
 }
